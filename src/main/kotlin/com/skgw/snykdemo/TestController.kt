@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController
 class TestController {
 
     @GetMapping("/test")
-    private fun test(@RequestParam("comment") comment: String): Map<String, Any> {
-        return mapOf("comment" to comment, "length" to comment.length)
+    private fun test(@RequestParam("comment") comment: String): String {
+        return comment
     }
 
 }
